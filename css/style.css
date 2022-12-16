@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+
+.header-section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo{
+    max-width: 80%;
+}
+
+.sub-line{
+    color: #fff;
+    padding: 20px 0 30px;
+    font-size: 20px;
+    text-transform: capitalize;
+    word-spacing: 2px;
+    position: relative;
+    font-weight: 300;
+}
+
+.sub-line::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: #fff;
+}
+
+.sub-line::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.search-box {
+    display: block;
+    margin: 60px auto 20px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+}
+
+.search-btn{
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #0a1113;
+    color: #fff;
+}
+
+/* gallery section */
+
+.gallery{
+    width: 100%;
+    padding: 40px;
+    background: #fff;
+    columns: 4;
+    column-gap: 20px;
+}
+
+.gallery-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #f9f9f9;
+}
+
+.gallery-img:hover {
+    transform: scale(1.2);
+}
+
+.load-more.hide{
+    display: none;
+    opacity: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.chosen-img {
+    margin-top: 20px;
+}
+
+.info {
+    padding: 20px;
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+.photographer{
+    font-weight: 300;
+    font-size: 1.4rem;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.photographer a{
+    text-decoration: none;
+    color: black;
+}
+.photographer:hover{
+    font-weight: 600;
+    color: rgb(82, 73, 73);
+}
+
+.location {
+    padding-top: 20px;
+}
+
+.user-img {
+    border-radius: 50%;
+    margin-top: 20px;
+    max-width: 20%;
+}
