@@ -1,13 +1,14 @@
-const access_key = 'UnS2DtcJL5i-7OAEgvtlR71NVtx5Grm0bTy0Cbjl_v8';
 let searchParam = location.search.split('=').pop();
 
-const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key}&count=30`;
-const search_photo_url = `https://api.unsplash.com/search/photos/?client_id=${access_key}&query=${searchParam}&per_page=30`;
+const access_key = 'K-HROYBtEk-hEcaCtWlS6oG--OMPLNRQA4Oz6qp-x0E';
 
+const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key}&count=4`;
+const search_photo_url = `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchParam}&per_page=4`;
 
 const gallery = document.querySelector('.gallery');
 
-let allImages; //this will store all images
+let currentImage = 0;
+let allImages; // this will store all the images
 
 const getImages = () => {
     fetch(random_photo_url)
@@ -35,6 +36,14 @@ const makeImages = (data) => {
         img.className = 'gallery-img';
 
         gallery.appendChild(img);
+
+        // popup image
+
+        img.addEventListener('click', () => {
+            currentImage = index;
+            showPopup(item);
+        })
+
     })
 }
 
